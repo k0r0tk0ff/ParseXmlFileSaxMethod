@@ -30,38 +30,40 @@ public class Main {
                 System.out.println("Stop parse XML...");
             }
 
-
-			/**
-			 * Receive notification of character data inside an element.
-			 * <p>
-			 * <p>By default, do nothing.  Application writers may override this
-			 * method to take specific actions for each chunk of character data
-			 * (such as adding the data to a node or buffer, or printing it to
-			 * a file).</p>
-			 *
-			 * @param ch     The characters.
-			 * @param start  The start position in the character array.
-			 * @param length The number of characters to use from the
-			 *               character array.
-			 * @throws SAXException Any SAX exception, possibly
-			 *                      wrapping another exception.
-			 * @see ContentHandler#characters
-			 */
-/*			@Override
+			@Override
 			public void characters(char[] ch, int start, int length) throws SAXException {
                 String str = "";
                 for (int i=0; i<length; i++) {
                     str += ch[start+i];
                 }
-			    System.out.println(str);
-			}*/
+			    System.out.print(str);
+			}
+
+
 
             @Override
             public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+
+                //show all characters in elements where attribute == "id"
                 String name = attributes.getValue("id");
                 if (name != null && !name.isEmpty()) {
-                    System.out.println(name);
+                    System.out.print(name);
                 }
+
+                //show all elements, where element name != null
+                //if(!qName.isEmpty()) System.out.println(qName);
+
+                /*for (int i=0; i<attributes.getLength(); i++ ) {
+                    attributes.getLocalName(i);
+                    attributes.getValue(i).toString();
+                }*/
+
+/*                if(qName.equals("book")) {
+                    for (int i=0; i<attributes.getLength(); i++ ) {
+                        System.out.println(attributes.getQName(i));
+                        System.out.println(attributes.getValue(i));
+                    }
+                }*/
             }
         };
 

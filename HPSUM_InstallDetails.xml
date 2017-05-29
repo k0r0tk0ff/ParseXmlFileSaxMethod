@@ -5,7 +5,7 @@
      <HasOmittedComponents>false</HasOmittedComponents>
      <NodeStatus>Deployment done.</NodeStatus>
      <DryRun>false</DryRun>
-     <ComponentCount>17</ComponentCount>
+     <ComponentCount>8</ComponentCount>
      <ComponentResults>
           <Component>
                <ComponentName>kmod-hpsa-3.4.6-165.rhel6u5.x86_64.rpm</ComponentName>
@@ -64,84 +64,12 @@
                <ComponentReturnCode>Success</ComponentReturnCode>
           </Component>
           <Component>
-               <ComponentName>hpssacli-2.0-23.0.x86_64.rpm</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>0</ResultCode>
-               <PreviousVersion></PreviousVersion>
-               <InstalledVersion>2.0</InstalledVersion>
-               <ComponentReturnCode>Success</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>hponcfg-4.4.0-0.x86_64.rpm</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>0</ResultCode>
-               <PreviousVersion></PreviousVersion>
-               <InstalledVersion>4.4.0</InstalledVersion>
-               <ComponentReturnCode>Success</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>hpdiags-10.14.1575-1559.linux.x86_64.rpm</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>0</ResultCode>
-               <PreviousVersion></PreviousVersion>
-               <InstalledVersion>10.14.1575</InstalledVersion>
-               <ComponentReturnCode>Success</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>CP023977.scexe</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>1</ResultCode>
-               <PreviousVersion></PreviousVersion>
-               <InstalledVersion>2.13.5</InstalledVersion>
-               <ComponentReturnCode>Success, reboot required to activate new version</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>CP023886.scexe</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>1</ResultCode>
-               <PreviousVersion>4.68</PreviousVersion>
-               <InstalledVersion>6.00</InstalledVersion>
-               <ComponentReturnCode>Success, reboot required to activate new version</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>CP021615.scexe</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>1</ResultCode>
-               <PreviousVersion></PreviousVersion>
-               <InstalledVersion>3.3</InstalledVersion>
-               <ComponentReturnCode>Success, reboot required to activate new version</ComponentReturnCode>
-          </Component>
-          <Component>
                <ComponentName>CP023181.scexe</ComponentName>
                <IsComponentSuccess>true</IsComponentSuccess>
                <ResultCode>1</ResultCode>
                <PreviousVersion>HPD4</PreviousVersion>
                <InstalledVersion>HPD6</InstalledVersion>
                <ComponentReturnCode>Success, reboot required to activate new version</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>CP023250.scexe</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>1</ResultCode>
-               <PreviousVersion></PreviousVersion>
-               <InstalledVersion>3.30</InstalledVersion>
-               <ComponentReturnCode>Success, reboot required to activate new version</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>CP022891.scexe</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>0</ResultCode>
-               <PreviousVersion>2013.09.08</PreviousVersion>
-               <InstalledVersion>2014.02.10</InstalledVersion>
-               <ComponentReturnCode>Success</ComponentReturnCode>
-          </Component>
-          <Component>
-               <ComponentName>CP017981.scexe</ComponentName>
-               <IsComponentSuccess>true</IsComponentSuccess>
-               <ResultCode>0</ResultCode>
-               <PreviousVersion>1.30</PreviousVersion>
-               <InstalledVersion>2.00</InstalledVersion>
-               <ComponentReturnCode>Success</ComponentReturnCode>
           </Component>
      </ComponentResults>
 </HPSUM_InstallDetails>

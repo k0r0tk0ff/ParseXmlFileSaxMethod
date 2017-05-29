@@ -2,17 +2,21 @@ package ru.k0r0tk0ff.main;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
  * Created by k0r0tk0ff on 5/29/17.
+ *
  */
 
 public class Main {
@@ -42,11 +46,17 @@ public class Main {
 			 * @throws SAXException Any SAX exception, possibly
 			 *                      wrapping another exception.
 			 * @see ContentHandler#startElement
+			 *
 			 */
+
 			@Override
 			public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+				//String name = attributes.getValue("name");
 				String name = attributes.getValue("name");
-				if(name != null && !name.isEmpty()) System.out.println(name);
+				//if(name != null && !name.isEmpty())) {
+				if(name != null) {
+					System.out.println(name);
+				}
 			}
 
 			/**
@@ -65,23 +75,24 @@ public class Main {
 			 *                      wrapping another exception.
 			 * @see ContentHandler#characters
 			 */
-			@Override
+		/*	@Override
 			public void characters(char[] ch, int start, int length) throws SAXException {
-
-				String str = "";
+*//*				String str = "";
 				for (int i = 0; 1 < length; i++) {
 					str += ch[start+i];
 				}
-				System.out.println(str);
-			}
+				System.out.println(str);*//*
+
+
+				//System.out.println(ch);
+				System.out.print(ch);
+			}*/
 		};
 
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		SAXParser parser = factory.newSAXParser();
-		parser.parse(new File("HPSUM_InstallDetails.xml"));
-
-
+		parser.parse(new File("HPSUM_InstallDetails.xml"), handler);
+		//parser.parse(new InputSource(new FileInputStream("1.xml")), handler);
 
 	}
-
 }

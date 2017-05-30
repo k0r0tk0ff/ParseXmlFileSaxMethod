@@ -1,10 +1,6 @@
 package ru.k0r0tk0ff.main;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
-import org.w3c.dom.ls.DOMImplementationLS;
-import org.w3c.dom.ls.LSSerializer;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -23,7 +19,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamSource;
 import javax.xml.transform.stream.StreamResult;
 
 /**
@@ -70,21 +65,21 @@ public class CreateXmlFileMethod {
 
         Transformer transformer = tFactory.newTransformer(stylesource);
         //transformer.setParameter("format-pretty-print", true);
-        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "5");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
         transformer.setOutputProperty(OutputKeys.STANDALONE, "yes");
-        //transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
 
         DOMSource source = new DOMSource(document2);
         StreamResult result = new StreamResult(System.out);
+
+        //for show on screen
         transformer.transform(source, result);
 
-
-/*        DOMImplementation impl = document2.getImplementation();
-        DOMImplementationLS implLS = (DOMImplementationLS) impl.getFeature("LS", "3.0");
-        LSSerializer ser = implLS.createLSSerializer();
-        ser.getDomConfig().setParameter("format-pretty-print", true);*/
-
-
-
+        //for write to file
+        transformer.transform(source,
+                new StreamResult(
+                        new FileOutputStream("temp.xml")
+                )
+        );
     }
 }
